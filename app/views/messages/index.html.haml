@@ -1,0 +1,46 @@
+.header
+  グループを作成しました
+
+.contents
+  .contents-left
+    = render partial: 'messages/left-header', locals: { left_header: @left_header }
+
+    .contents-left-body
+      .group1
+        .group1-name
+          サンプル
+        .group1-message
+          よろしくお願いします
+      .group2
+        .group2-name
+          sample-group
+        .group2-message
+          hello!
+
+  .contents-right
+    .contents-right-header
+      .contents-right-header__btn
+        Edit
+      .box
+        .group
+          サンプル
+        .member
+          Member:seo
+
+    .contents-right-body
+      .right-box1
+        .right-info1
+          seo 2017-05-18 13:19:51 UTC
+        .right-message1
+          はじめまして
+      .right-box2
+        .right-info2
+          seo 2017-05-18 13:20:00 UTC
+        .right-message2
+          さようなら
+
+    .contents-right-form
+      = render partial: 'messages/right-form', locals: { right_form: @right_form }
+
+
+
