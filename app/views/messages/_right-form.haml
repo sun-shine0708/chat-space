@@ -1,10 +1,8 @@
 .contents-right-form__box
-  .contents-right-form__box__input-box
-    type a message
+  = form_for [@group, @message] do |f|
+    = f.text_field :content, class: 'contents-right-form__box__input-box', placeholder: 'type a message'
     .formbox-image
-      %label.upload-label.formbox-image--icon
-        %i.fa.fa-picture-o
-        %input.image{type: "file"}
-
-  .contents-right-form__box__submit
-    send
+      = f.label :image, class: 'formbox-image--icon' do
+        = fa_icon 'picture-o'
+        = f.file_field :image, class: 'image'
+    = f.submit 'Send', class: 'contents-right-form__box__submit'
