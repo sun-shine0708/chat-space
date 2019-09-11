@@ -28,12 +28,16 @@
     .chat-group-form__field--right
       .chat-group-users.js-add-user
         .chat-group-user.clearfix.js-chat-member
-          %input{name: "group[user_ids][]", type: "hidden", value: current_user.id}/
+          = f.hidden_field :name, type: "hidden", value: current_user.id, name: "group[user_ids][]"
           = current_user.name
+
         - group.users.each do |user|
           - if current_user.name != user.name
             .chat-group-user.clearfix.js-chat-member
               = user.name
+              .user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn
+                削除
+                = f.hidden_field :name, type: "hidden", value: user.id, name: "group[user_ids][]"
 
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
