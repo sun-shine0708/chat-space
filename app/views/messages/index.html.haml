@@ -6,7 +6,7 @@
     .contents-right-header
       .contents-right-header__btn
         %div{"data-turbolinks": "false"}
-          = link_to 'Edit' ,edit_group_path(@group.id)
+          = link_to 'Edit' ,edit_group_path(@group.id),class: "edit-link"
       .box
         .group
           = @group.name
