@@ -13,7 +13,7 @@
   .contents-left-body
     - current_user.groups.each do |group|
       .group1
-        = link_to group_messages_path(group) do
+        = link_to group_messages_path(group) ,class: "edit-link" do
           .group1-name
             = group.name
           .group1-message
