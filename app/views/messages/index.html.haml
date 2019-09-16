@@ -10,9 +10,11 @@
       .box
         .group
           = @group.name
+
         .member
-        - @group.users.each do |user|
-          = user.name
+          %label Member:
+          - @group.users.each do |user|
+            = user.name
 
     .contents-right-body
       = render @messages

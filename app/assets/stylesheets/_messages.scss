@@ -62,7 +62,7 @@
 .contents-left-body {
   height: calc(100vh - 100px);
   background-color: #2f3e51;
-  padding: 0 20px;
+  padding: 20px 20px 0;;
   overflow: scroll;
 }
 
@@ -143,7 +143,7 @@
 }
 
 .right-box1 {
-  margin-bottom: 40px;
+  padding-bottom: 40px;
   overflow: scroll;
 }
 
@@ -203,18 +203,18 @@
     &__input-box {
       position: relative;
       height: 50px;
-      line-height: 50px;
       padding: 0 10px 0 10px;
       color: $GrayColor;
       background-color: $mainWhiteColor;
-      width: calc(100% - 120px);
+      width: calc(100% - 115px);
     }
 
       .formbox-image {
         position: absolute;
-        right: 150px;
-        top:12px;
+        right: 130px;
+        top:10px;
         z-index:1;
+        font-size: 1.3rem;
 
         &--icon {
           cursor: pointer;
