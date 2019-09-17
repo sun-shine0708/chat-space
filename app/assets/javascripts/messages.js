@@ -37,6 +37,7 @@ $(document).on('turbolinks:load', function() {
     })
     .fail(function() {
       alert('error');
+      $('.contents-right-form__box__submit').prop('disabled',false);
     })
   });
 
