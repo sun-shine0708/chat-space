@@ -41,10 +41,10 @@ $(function() {
       dataType: 'json'
     })
 
-    .done(function(user) {
+    .done(function(users) {
       $("#user-search-result").empty();
-      if (user.length !== 0) {
-        user.forEach(function(user){
+      if (users.length !== 0) {
+        users.forEach(function(user){
           appendUser(user);
         });
       }
@@ -65,7 +65,7 @@ $(function() {
       appendUserList(name, user_id);
     });
 
-　    $(document).on("click", '.user-search-remove', function() {
+      $(document).on("click", '.user-search-remove', function() {
       $(this).parent().remove();
     });
   });
